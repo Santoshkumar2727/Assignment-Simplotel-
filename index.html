@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+/* Resetting default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation menu styles */
+.navbar { 
+   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar img {
+  height: 24px; /* Adjust height as needed */
+  padding: 10px 10px;
+}
+
+.navbar a {
+  color: black;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: 700;
+
+}
+
+.navbar .icons {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .left-icon img {
+  margin-right: 10px;
+  width: 120px;
+  height: 88px;
+}
+
+/* Hero section styles */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.hero-button {
+  background-image: linear-gradient(to right, black, #b4b4b4);
+  color: white;
+  padding: 10px 60px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 80px;
+}
+
+/* Column layout styles */
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.column {
+  flex: 1;
+  /* max-width: 300px; */
+  padding: 20px;
+  text-align: center;
+}
+.cl {
+  flex: 1;
+ max-width:400px;
+  padding: 20px;
+  text-align: center;
+}
+.column img {
+  max-width: 100%;
+  height: auto;
+}
+.btn{
+  background: black;
+    color: white;
+    padding: 10px 10px;
+     cursor:pointer;
+     margin-top:10px;
+     padding-right: 25px;
+    padding-left: 25px;
+}
+.col1{
+  text-align: left;
+  margin: 10px;
+}
+.col2{
+  text-align: center;
+  margin: 10px;
+}
+.col3{
+  text-align: right;
+  margin: 10px;
+}
+.float{
+  float:left;
+  padding-right:25px;
+  padding-left:25px;
+
+}
+.float1{
+  float:right;
+  padding-right:25px;
+  padding-left:25px;
+
+
+  .float2{
+    float:right;
+    padding-right:25px;
+    padding-left:25px;
+  }
+  
+}
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+  }
+
+  /* Hamburger Menu */
+  .navbar {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+
+  .navbar a.icon {
+    display: block;
+    text-align: justify;
+    padding: 14px 20px;
+  }
+
+  .navbar.responsive a {
+    display: block;
+    text-align: left;
+  }
+
+  .navbar.responsive a:not(.icon) {
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* Hide toggle icon in desktop view */
+  .navbar .icon {
+    display: none;
+  }
+}
+a.icon {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  a.icon {
+    display: none;
+}
+}
+
+
+
+</style>
+</head>
+<body>
+
+<!-- Navigation Menu -->
+<div class="navbar" id="navbar">
+  <div class="left-icon">
+    <img src="phoenix-logo.png" alt="Left Icon"> <!-- Replace with your left image URL -->
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a> /* For Mobile menu i used this(Optional) */
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Order</a>
+    <a href="#">Food</a>
+    <a href="#">Restaurant</a>
+    <a href="#">Testimonial</a>
+    <a href="#">Contact Us</a>
+  </div>
+  <div class="icons">
+    <img src="WhatsApp icon.jpg" alt="WhatsApp Icon" style="width: 50px;height: 50px;"> <!-- Replace with your WhatsApp icon -->
+    <img src="Facebook icon.jpg" alt="Facebook Icon" style="width: 50px;height: 50px;"> <!-- Replace with your Facebook icon -->
+  </div>
+</div>
+
+<!-- Hero Section -->
+<div class="hero">
+  <img class="hero-img" src="banner.jpg" alt="Hero Image">
+  <div class="hero-content">
+    <a href="#" class="hero-button">Lorem Ipsum</a>
+  </div>
+</div>
+
+<!-- 3 Columns with Text -->
+<div class="columns" style="background: #bcb9b9;margin-top: 0px; padding: 20px 0px;">
+  <div class="column">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum rem ipsam iure reiciendis nobis sint maiores laborum quae ullam quod nihil, voluptatibus adipisci voluptate fugiat nesciunt,  </p>
+  </div>
+  <div class="column">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum rem ipsam iure reiciendis nobis sint maiores laborum quae ullam quod nihil, voluptatibus adipisci voluptate fugiat nesciunt,  </p>
+  </div>
+  <div class="column">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum rem ipsam iure reiciendis nobis sint maiores laborum quae ullam quod nihil, voluptatibus adipisci voluptate fugiat nesciunt,  </p>
+  </div>
+</div>
+
+<!-- Heading and last section -->
+
+<div class="container">
+  <h2 style="margin-left:50px; font-size: 40px;">Lorem Ipsum</h2>
+  <div class="columns" >
+    <div class="column cl" >
+      <img src="rooms.jpg" alt="Image 1">
+      <h3 class="col1">Lorem Ipsum</h3>
+      <p class="col1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a href="#"><button class="btn float">Learn More</button></a>
+    </div>
+    <div class="column cl ">
+      <img src="dining.jpg" alt="Image 2">
+      <h3 class="col2">Lorem Ipsum</h3>
+      <p class="col2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <button class="btn float3">Learn More</button>
+    </div>
+    <div class="column cl">
+      <img src="pool.jpg" alt="Image 3">
+      <h3 class="col3">Lorem Ipsum</h3>
+      <p class="col3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <button class="btn float1">Learn More</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleMenu() {
+  var x = document.getElementById("navbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+
+</script>
+
+</body>
+</html>
